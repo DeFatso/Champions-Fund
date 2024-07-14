@@ -3,7 +3,8 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
 }
 
 .home-container {
@@ -19,6 +20,7 @@ body {
     padding: 1rem;
     border-radius: 5px;
     margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .header-buttons {
@@ -29,51 +31,21 @@ body {
 .logout-button, .register-button {
     font-size: 1rem;
     font-weight: bold;
-    color: #007bff;
-    background-color: white;
+    color: white;
+    background: linear-gradient(135deg, #6b73ff, #000dff);
     padding: 0.5rem 1rem;
-    border: 2px solid #007bff;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .logout-button:hover, .register-button:hover {
-    background-color: #0056b3;
-    color: white;
+    background: linear-gradient(135deg, #4853ff, #0007e0);
+    transform: translateY(-2px);
 }
-
-.instructions {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
-}
-
-.instructions h2 {
-    margin-top: 0;
-}
-
-.home-header:hover {
-    transform: translateY(-3px);
-}
-
-.header-buttons {
-    display: flex;
-    gap: 1rem;
-}
-
 
 .children-grid {
-    background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 1rem;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
@@ -82,33 +54,27 @@ body {
 .child-card {
     background-color: white;
     padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .child-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .child-image {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-bottom: 0.5rem;
 }
 
 .child-details {
     text-align: left;
     margin-bottom: 1rem;
-    font-size: 0.9rem;
-    color: #333;
-}
-
-.child-details p {
-    margin: 0.5rem 0;
 }
 
 .contact-buttons {
@@ -119,7 +85,7 @@ body {
 .contact-button {
     font-size: 0.9rem;
     color: white;
-    background-color: #007bff;
+    background: linear-gradient(135deg, #6b73ff, #000dff);
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
@@ -128,15 +94,27 @@ body {
 }
 
 .contact-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
+    background: linear-gradient(135deg, #4853ff, #0007e0);
+    transform: translateY(-2px);
 }
 
-.home-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+.instructions {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
     margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.instructions h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    color: #007bff;
+}
+
+.instructions p {
+    margin: 0.5rem 0;
+    line-height: 1.5;
 }
 
 @media (max-width: 600px) {

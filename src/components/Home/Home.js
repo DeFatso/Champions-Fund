@@ -52,16 +52,11 @@ const Home = () => {
           <button onClick={handleLogout} className="logout-button">Logout</button>
         </div>
       </header>
-      <section className="instructions">
-        <h2>Welcome to the Champions Fund</h2>
-        <p>Here you can view and support children in need. Follow the steps below to get started:</p>
-        <ol>
-          <li>Browse the list of children below and read their profiles.</li>
-          <li>To support a child, click on the Email or WhatsApp button to contact us for more information.</li>
-          <li>To register a new child, click on the "Register a Child" button above.</li>
-          <li>To logout, click on the "Logout" button above.</li>
-        </ol>
-      </section>
+      <div className="instructions">
+        <h2>Welcome to Champions Fund</h2>
+        <p>Our mission is to provide support to children in need. Browse through the list of children below to learn more about their needs and how you can help.</p>
+        <p>To register a child, click on the "Register a Child" button. If you wish to support a child, you can contact us via email or WhatsApp by clicking on the respective buttons in the child's card.</p>
+      </div>
       <div className="children-grid">
         {children.map((child, index) => (
           <div key={index} className="child-card">
