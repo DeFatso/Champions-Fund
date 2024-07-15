@@ -5,7 +5,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebaseConfig';
 import Landing from './components/Landing/Landing';
 import Home from './components/Home/Home';
-import SignUp from './components/SignUp';
+import SignUp from './components/SignUp/SignUp';
 import SignIn from './components/SignIn/SignIn';
 import ProtectedRoute from './components/ProtectedRoute';
 import RegisterChild from './components/RegisterChild/RegisterChild';
