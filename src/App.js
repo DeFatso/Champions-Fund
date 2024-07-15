@@ -6,7 +6,7 @@ import { auth } from './firebaseConfig';
 import Landing from './components/Landing/Landing';
 import Home from './components/Home/Home';
 import SignUp from './components/SignUp';
-import SignIn from './components/SignIn';
+import SignIn from './components/SignIn/SignIn';
 import ProtectedRoute from './components/ProtectedRoute';
 import RegisterChild from './components/RegisterChild/RegisterChild';
 

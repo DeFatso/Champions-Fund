@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { db } from '../../firebaseConfig';
 import { collection, addDoc } from 'firebase/firestore';
 import './RegisterChild.css';
+import backIcon from './back.svg'; // Import the back icon
 
 const RegisterChild = () => {
   const [formData, setFormData] = useState({
@@ -38,7 +39,9 @@ const RegisterChild = () => {
   return (
     <div className="register-container">
       <header className="register-header">
-        <button className="back-button" onClick={handleBack}>Back</button>
+        <button className="back-button" onClick={handleBack}>
+          <img src={backIcon} alt="Back" className="back-icon" />
+        </button>
         <h1>Register a Child</h1>
       </header>
       <form onSubmit={handleSubmit} className="register-form">
