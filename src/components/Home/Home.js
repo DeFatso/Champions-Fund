@@ -52,10 +52,9 @@ const Home = () => {
           <button onClick={handleLogout} className="logout-button">Logout</button>
         </div>
       </header>
-      <div className="instructions">
+      <div className="welcome-message">
         <h2>Welcome to Champions Fund</h2>
         <p>Our mission is to provide support to children in need. Browse through the list of children below to learn more about their needs and how you can help.</p>
-        <p>To register a child, click on the "Register a Child" button. If you wish to support a child, you can contact us via email or WhatsApp by clicking on the respective buttons in the child's card.</p>
       </div>
       <div className="children-grid">
         {children.map((child, index) => (
@@ -74,6 +73,35 @@ const Home = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="instructions">
+        <h2>How to Use This App</h2>
+        <p>To register a child, click on the "Register a Child" button. If you wish to support a child, you can contact us via email or WhatsApp by clicking on the respective buttons in the child's card.</p>
+      </div>
+      <div className="testimonials">
+        <h2>Testimonials</h2>
+        <p>Read stories from people who have made a difference through Champions Fund.</p>
+        <blockquote>"Champions Fund has changed my life and the lives of many children. I am grateful for their support!" - Jane Doe</blockquote>
+      </div>
+      <div className="upcoming-events">
+        <h2>Upcoming Events</h2>
+        <ul>
+          <li>Charity Run - July 20, 2024</li>
+          <li>Fundraising Gala - August 15, 2024</li>
+        </ul>
+      </div>
+      <div className="call-to-action">
+        <h2>Get Involved</h2>
+        <p>You can make a difference by donating, volunteering, or registering a child in need.</p>
+      </div>
+      <div className="faq">
+        <h2>Frequently Asked Questions</h2>
+        <p><strong>How can I support a child?</strong> You can contact us via email or WhatsApp to learn more about a child's needs and how you can help.</p>
+        <p><strong>How do I register a child?</strong> Click on the "Register a Child" button and fill out the form with the required information.</p>
+      </div>
+      <div className="footer">
+        <p>&copy; 2024 Champions Fund. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a> | <a href="/contact">Contact Us</a></p>
       </div>
     </div>
   );
