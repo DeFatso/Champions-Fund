@@ -6,95 +6,70 @@ import { collection, addDoc } from 'firebase/firestore';
 import './RegisterChild.css';
 
 const RegisterChild = () => {
-  const [name, setName] = useState('');
-  const [age, setAge] = useState('');
-  const [province, setProvince] = useState('');
-  const [needs, setNeeds] = useState('');
-  const [family, setFamily] = useState('');
-  const [image, setImage] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    age: '',
+    province: '',
+    needs: '',
+    family: '',
+    image: ''
+  });
+
   const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      await addDoc(collection(db, 'children'), {
-        name,
-        age,
-        province,
-        needs,
-        family,
-        image
-      });
-      navigate('/home');
+      await addDoc(collection(db, "children"), formData);
+      alert('Child registered successfully!');
     } catch (error) {
       console.error('Error adding document: ', error);
     }
   };
 
+  const handleBack = () => {
+    navigate('/home');
+  };
+
   return (
     <div className="register-container">
       <header className="register-header">
+        <button className="back-button" onClick={handleBack}>Back</button>
         <h1>Register a Child</h1>
       </header>
-      <form className="register-form" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="register-form">
         <div className="form-group">
-          <label>Name</label>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
+          <label htmlFor="name">Name</label>
+          <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
         </div>
         <div className="form-group">
-          <label>Age</label>
-          <input
-            type="number"
-            value={age}
-            onChange={(e) => setAge(e.target.value)}
-            required
-          />
+          <label htmlFor="age">Age</label>
+          <input type="number" id="age" name="age" value={formData.age} onChange={handleChange} required />
         </div>
         <div className="form-group">
-          <label>Province</label>
-          <input
-            type="text"
-            value={province}
-            onChange={(e) => setProvince(e.target.value)}
-            required
-          />
+          <label htmlFor="province">Province</label>
+          <input type="text" id="province" name="province" value={formData.province} onChange={handleChange} required />
         </div>
         <div className="form-group">
-          <label>Needs</label>
-          <textarea
-            value={needs}
-            onChange={(e) => setNeeds(e.target.value)}
-            required
-          ></textarea>
+          <label htmlFor="needs">Needs</label>
+          <input type="text" id="needs" name="needs" value={formData.needs} onChange={handleChange} required />
         </div>
         <div className="form-group">
-          <label>Family</label>
-          <textarea
-            value={family}
-            onChange={(e) => setFamily(e.target.value)}
-            required
-          ></textarea>
+          <label htmlFor="family">Family</label>
+          <input type="text" id="family" name="family" value={formData.family} onChange={handleChange} required />
         </div>
         <div className="form-group">
-          <label>Image URL</label>
-          <input
-            type="url"
-            value={image}
-            onChange={(e) => setImage(e.target.value)}
-            required
-          />
+          <label htmlFor="image">Image URL</label>
+          <input type="url" id="image" name="image" value={formData.image} onChange={handleChange} required />
         </div>
         <button type="submit" className="submit-button">Register</button>
       </form>
       <footer className="register-footer">
-        <p>&copy; 2024 Champions Fund. All rights reserved.</p>
-        <p><a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a> | <a href="/contact">Contact Us</a></p>
+        <p>Thank you for helping us support children in need.</p>
       </footer>
     </div>
   );
