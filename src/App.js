@@ -9,6 +9,7 @@ import SignUp from './components/SignUp/SignUp';
 import SignIn from './components/SignIn/SignIn';
 import ProtectedRoute from './components/ProtectedRoute';
 import RegisterChild from './components/RegisterChild/RegisterChild';
+import AboutUs from './components/AboutUs/About';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -50,6 +51,7 @@ function App() {
       <Route path="/login" element={<SignIn />} />
       <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
       <Route path="/register-child" element={<ProtectedRoute><RegisterChild /></ProtectedRoute>} />
+      <Route path="/about-us" element={<AboutUs />} />
     </Routes>
   );
 }
