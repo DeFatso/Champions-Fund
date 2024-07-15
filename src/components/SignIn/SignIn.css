@@ -17,13 +17,23 @@ body {
 }
 
 .signin-header {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 2rem;
+}
+
+.back-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
 }
 
 .signin-header h1 {
     color: #007bff;
     margin: 0;
+    flex-grow: 1;
+    text-align: center;
 }
 
 .signin-form {

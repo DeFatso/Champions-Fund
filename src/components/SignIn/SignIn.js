@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../firebaseConfig';
 import './SignIn.css';
+import backIcon from './back.svg'; // Adjust the path if needed
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
@@ -21,9 +22,14 @@ const SignIn = () => {
     }
   };
 
+  const handleBack = () => {
+    navigate('/');
+  };
+
   return (
     <div className="signin-container">
       <header className="signin-header">
+        <img src={backIcon} alt="Back" className="back-icon" onClick={handleBack} />
         <h1>Sign In</h1>
       </header>
       <form onSubmit={handleSubmit} className="signin-form">
