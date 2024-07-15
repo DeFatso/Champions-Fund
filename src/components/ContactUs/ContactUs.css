@@ -1,0 +1,30 @@
+.contactus-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .contactus-header {
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 10px;
+  }
+  
+  .back-icon {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .contactus-content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .contactus-footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 10px;
+  }  
