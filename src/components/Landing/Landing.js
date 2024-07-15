@@ -10,6 +10,7 @@ const Landing = () => {
         <nav>
           <Link to="/login" className="nav-link">Sign In</Link>
           <Link to="/signup" className="nav-link">Sign Up</Link>
+          <Link to="/about-us" className="nav-link">About Us</Link>
         </nav>
       </header>
       <div className="landing-content">

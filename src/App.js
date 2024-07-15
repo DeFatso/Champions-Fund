@@ -10,6 +10,7 @@ import SignIn from './components/SignIn/SignIn';
 import ProtectedRoute from './components/ProtectedRoute';
 import RegisterChild from './components/RegisterChild/RegisterChild';
 import AboutUs from './components/AboutUs/About';
+import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -32,9 +33,10 @@ function App() {
   // This effect should only run when authentication status changes
   useEffect(() => {
     if (!loading) {
-      if (authenticated && (window.location.pathname === '/' || window.location.pathname === '/login' || window.location.pathname === '/signup')) {
+      const path = window.location.pathname;
+      if (authenticated && (path === '/' || path === '/login' || path === '/signup')) {
         navigate('/home');
-      } else if (!authenticated && window.location.pathname !== '/login' && window.location.pathname !== '/signup') {
+      } else if (!authenticated && path !== '/login' && path !== '/signup' && path !== '/about-us') {
         navigate('/');
       }
     }
@@ -52,6 +54,7 @@ function App() {
       <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
       <Route path="/register-child" element={<ProtectedRoute><RegisterChild /></ProtectedRoute>} />
       <Route path="/about-us" element={<AboutUs />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
     </Routes>
   );
 }

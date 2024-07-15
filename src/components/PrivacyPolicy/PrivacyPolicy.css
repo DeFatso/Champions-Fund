@@ -1,0 +1,29 @@
+.privacypolicy-container {
+    padding: 1rem;
+}
+
+.privacypolicy-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.back-icon {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.privacypolicy-content {
+    margin-top: 1rem;
+}
+
+.privacypolicy-content h2 {
+    margin-top: 1rem;
+}
+
+.privacypolicy-footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
