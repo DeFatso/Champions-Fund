@@ -1,0 +1,29 @@
+.termsofservice-container {
+    padding: 1rem;
+}
+
+.termsofservice-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.back-icon {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.termsofservice-content {
+    margin-top: 1rem;
+}
+
+.termsofservice-content h2 {
+    margin-top: 1rem;
+}
+
+.termsofservice-footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
