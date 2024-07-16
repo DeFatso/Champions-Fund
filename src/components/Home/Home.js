@@ -1,4 +1,3 @@
-// src/components/Home/Home.js
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { db, auth } from '../../firebaseConfig';
@@ -32,12 +31,14 @@ const Home = () => {
   };
 
   const handleEmail = (child) => {
+    const recipientEmail = 'support@championsfund.com';
     const subject = `Support for ${child.name}`;
     const body = `Hello,\n\nI am interested in supporting ${child.name}. Please provide me with more information.\n\nThank you.`;
-    window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   const handleWhatsApp = (child) => {
+    const recipientPhoneNumber = '27123456789';
     const message = `Hello, I am interested in supporting ${child.name}. Please provide me with more information.`;
     const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');

@@ -20,7 +20,7 @@ const ContactUs = () => {
         <h2>Get in Touch</h2>
         <p>If you have any questions or need further information, please feel free to contact us:</p>
         <p><strong>Email:</strong> info@championsfund.org</p>
-        <p><strong>Phone:</strong> +1 (234) 567-890</p>
+        <p><strong>Phone:</strong> +263 (234) 567-890</p>
         <p><strong>Address:</strong> 123 Charity Street, Helping City, Country</p>
       </div>
       <footer className="contactus-footer">
