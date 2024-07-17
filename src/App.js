@@ -13,6 +13,7 @@ import AboutUs from './components/AboutUs/About';
 import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService/TermsOfService';
 import ContactUs from './components/ContactUs/ContactUs';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -59,6 +60,7 @@ function App() {
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/terms-of-service" element={<TermsOfService />} />
       <Route path="/contact" element={<ContactUs />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

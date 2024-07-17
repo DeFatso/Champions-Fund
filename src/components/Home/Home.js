@@ -40,7 +40,7 @@ const Home = () => {
   const handleWhatsApp = (child) => {
     const recipientPhoneNumber = '27123456789';
     const message = `Hello, I am interested in supporting ${child.name}. Please provide me with more information.`;
-    const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${recipientPhoneNumber}&text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
